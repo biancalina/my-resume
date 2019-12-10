@@ -1,0 +1,21 @@
+-
+  var myFullName = 'Bianca Andrei'
+  var myJobTitle = 'Junior Front End Developer'
+  var socialList = [
+    {icon: 'facebook2', url: 'https://www.facebook.com/profile.php?id=100008232734116'},
+    {icon: 'youtube', url: 'https://youtube.com/UCGYp9uF9YAKt1U95pqF1dtQ'},
+    {icon: 'github', url: 'https://github.com/biancalina'},
+    {icon: 'stackoverflow', url: 'https://stackoverflow.com/users/12481414/bianca-andrei'},
+    {icon: 'twitter', url: 'https://twitter.com/ABianca0904'},
+    {icon: 'linkedin2', url: 'https://www.linkedin.com/in/biancalina'},
+  ]
+#landing-page
+.landing-page
+  .landing-page__wrapper
+    h1.landing-page__name=myFullName
+    h2.landing-page__title=myJobTitle
+    ul.landing-page__social
+      each social in socialList
+        li.landing-page__item
+          label.landing-page__label(for=" ")
+            span(class=`my-cv-${social.icon}`)
