@@ -1,35 +1,33 @@
 .about-me {
   background-image: radial-gradient(
       ellipse,
-      #c7b550,
-      #ac7510
+      $color-roti,
+      $color-buttered-rum
   );
 }
 
 .about-me__header {
-  color: white;
-  padding: 1rem 2rem;
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  color: $color-white;
+  @extend %header;
 }
 
 .about-me__avatar {
   border-radius: 50%;
   width: 100%;
-  border: 0.5rem solid rgb(224, 190, 79);
+  border: 0.5rem solid $color-anzac;
 }
 
 .about-me__avatar-wrapper {
   max-width: 50%;
   margin: 1rem auto;
-  border: 0.5rem solid rgba(243, 186, 62, 0.3);
+  border: 0.5rem solid $color-anzac-dark;
   border-radius: 50%;
   position: relative;
   
   &:after {
     content: '';
     position: absolute;
-    border: 0.5rem solid rgba(238, 205, 98, 0.3);
+    border: 0.5rem solid $color-anzac-dark1;
     top: -1.5rem;
     bottom: -1.5rem;
     left: -1.5rem;
@@ -48,7 +46,7 @@
 
 .about-me__full-name,
 .about-me__title {
-  color: white;
+  color: $color-white;
   padding: 0.1rem 2rem;
   text-align: center;
 }
@@ -70,10 +68,10 @@
   width: 70%;
   font-size: 3rem;
   text-decoration: none;
-  border: 0.2rem solid gray;
+  border: 0.2rem solid $color-gray;
   border-radius: 1rem;
-  background-color: whitesmoke;
-  color: gray;
+  background-color: $color-white;
+  color: $color-gray;
   margin: 1rem auto;
   display: inline-grid;
   justify-content: space-around;
@@ -82,8 +80,8 @@
 
   &:hover {
       color: white;
-      background-color: rgb(197, 165, 58);
-      border: 0.2rem solid rgb(134, 94, 6);
+      background-color: $color-earls-green;
+      border: 0.2rem solid $color-yukon-gold;
   }
 }
 
