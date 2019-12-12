@@ -1,6 +1,26 @@
 -
   var awardHeader = 'Awards'
+  var awardList = [
+    {
+      title: 'The quickest student from Codetap',
+      location: 'London',
+      date: '2019',
+    }
+  ];
 
 #award
 .award
     .award__header=awardHeader
+    each award in awardList
+      .award__card
+        .award__icon
+          span.my-cv-trophy
+        .award__title=award.title
+
+        .award__icon
+          span.my-cv-map
+        .award__location=award.location
+
+        .award__icon
+          span.my-cv-calendar
+        .award__date=award.date
