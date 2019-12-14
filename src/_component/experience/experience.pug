@@ -1,0 +1,60 @@
+-
+  var header = 'Experience'
+  var experienceList = [
+    {
+      title: 'Junior Front End Developer',
+      date: '2019 Jan - present',
+      company: 'BitBee Limited',
+      responsabilityList: [
+        'Help and support members improving current aptitudes and gaining new skill sets.',
+        'Developing web pages using technologies including HTML, CSS and JavaScript.',
+        'Optimising websites for all multimedia platforms.'
+      ]
+    },
+    {
+      title: 'Personal Assistant',
+      date: '2018 Jun - 2019 Jan',
+      company: 'R S WIND LIMITED',
+      responsabilityList: [
+        '',
+        '',
+        ''
+      ]
+    },
+    {
+      title: 'Team Leader',
+      date: '2017 Sept - 2018 May',
+      company: 'City Abseiling LTD',
+      responsabilityList: [
+        '',
+        '',
+        ''
+      ]
+    },
+    {
+      title: 'Phisiotherapist',
+      date: '2015 Jun - 2017 Jul',
+      company: 'Kineto Promedical Life',
+      responsabilityList: [
+        '',
+        '',
+        ''
+      ]
+    }
+  ];
+
+#experience
+.experience
+    .experience__header=header
+    input(type="radio", name="experience=", id="experience-default")
+    label(for="experience-default") &times;
+    each experience, key in experienceList
+      input.experience__input(type="radio", name="experience" id=`experience-id-${key}`)
+      label.experience__title(for=`experience-id-${key}`)=experience.title
+      .experience_details
+        .experience__top
+          .experience__date=experience.date
+          .experience__company=experience.company
+        .experience__list
+          each responsability in experience.responsabilityList
+            .experience__responsability=responsability
